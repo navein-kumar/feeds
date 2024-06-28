@@ -1,5 +1,5 @@
-alert dns $HOME_NET any -> any any (msg:"TGI HUNT VulnTesting Domain (www.google.com in DNS Lookup)"; dns_query; content:"www.google.com"; isdataat:!1,relative; reference:url,gist.github.com/travisbgreen/3f7ddcd5841d802e536d5854e2218e8c; classtype:trojan-activity; sid:2610182; rev:1;)
+alert dns $HOME_NET any -> any any (msg:"TGI HUNT VulnTesting Domain (www.google.com in DNS Lookup)"; dns_query; content:"www.google.com"; isdataat:!1,relative; reference:url,gist.github.com/travisbgreen/3f7ddcd5841d802e536d5854e2218e8c; classtype:trojan-activity; sid:6000014; rev:1;)
 
-alert dns $HOME_NET any -> any any (msg:"TGI HUNT VulnTesting Domain (www.sex.com in DNS Lookup)"; dns_query; content:"www.sex.com"; isdataat:!1,relative; reference:url,gist.github.com/travisbgreen/3f7ddcd5841d802e536d5854e2218e8c; classtype:trojan-activity; sid:2610182; rev:1;)
+alert dns $HOME_NET any -> any any (msg:"TGI HUNT VulnTesting Domain (www.sex.com in DNS Lookup)"; dns_query; content:"www.sex.com"; isdataat:!1,relative; reference:url,gist.github.com/travisbgreen/3f7ddcd5841d802e536d5854e2218e8c; classtype:trojan-activity; sid:6000015; rev:1;)
 
-alert dns $HOME_NET any -> any any (msg:"TGI HUNT VulnTesting Domain (www.facebook.com in DNS Lookup)"; dns_query; content:"www.facebook.com"; isdataat:!1,relative; reference:url,gist.github.com/travisbgreen/3f7ddcd5841d802e536d5854e2218e8c; classtype:trojan-activity; sid:2610182; rev:1;)
+alert dns $HOME_NET any -> any any (msg:"TGI HUNT VulnTesting Domain (www.facebook.com in DNS Lookup)"; dns_query; content:"www.facebook.com"; isdataat:!1,relative; reference:url,gist.github.com/travisbgreen/3f7ddcd5841d802e536d5854e2218e8c; classtype:trojan-activity; sid:6000016; rev:1;)
