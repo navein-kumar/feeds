@@ -1,5 +1,1 @@
-alert dns $HOME_NET any -> any any (msg:"TGI HUNT VulnTesting Domain (www.google.com in DNS Lookup)"; dns_query; content:"www.google.com"; isdataat:!1,relative; reference:url,gist.github.com/travisbgreen/3f7ddcd5841d802e536d5854e2218e8c; classtype:trojan-activity; sid:6000014; rev:1;)
-
-alert dns $HOME_NET any -> any any (msg:"TGI HUNT VulnTesting Domain (www.sex.com in DNS Lookup)"; dns_query; content:"www.sex.com"; isdataat:!1,relative; reference:url,gist.github.com/travisbgreen/3f7ddcd5841d802e536d5854e2218e8c; classtype:trojan-activity; sid:6000015; rev:1;)
-
-alert dns $HOME_NET any -> any any (msg:"TGI HUNT VulnTesting Domain (www.facebook.com in DNS Lookup)"; dns_query; content:"www.facebook.com"; isdataat:!1,relative; reference:url,gist.github.com/travisbgreen/3f7ddcd5841d802e536d5854e2218e8c; classtype:trojan-activity; sid:6000016; rev:1;)
+alert dns $HOME_NET any -> any any (msg:"DNS Query to Malicious FQDN"; dns.query; dataset:isset, domains_iocs, type string, load /etc/suricata/rules/domains_iocs.list, memcap 10mb, hashsize 1024; classtype: trojan-activity; sid:1000000; rev:1;)
