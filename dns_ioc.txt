@@ -1,4 +1,5 @@
 1) download domain list
+https://idstower.com/blog/alerting-on-iocs-using-suricata/
 
 2) convert to base64
   while IFS= read -r line; do echo -n $line | base64 -w 1000; done < domains.text > domains_iocs.list
