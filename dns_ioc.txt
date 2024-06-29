@@ -1,0 +1,6 @@
+1) download domain list
+
+2) convert to base64
+  while IFS= read -r line; do echo -n $line | base64 -w 1000; done < domains.text > domains_iocs.list
+
+3) cp domains_iocs.list /etc/suricata/rules/ && chown suricata:suricata /etc/suricata/rules/domains_iocs.list
