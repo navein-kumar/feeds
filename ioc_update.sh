@@ -12,5 +12,5 @@ curl "https://raw.githubusercontent.com/xRuffKez/NRD/main/nrd-30day_part2.txt"  
 cat 1.txt 2.txt domains1 > merge2.txt &&
 sort merge2.txt | uniq > final2.txt &&
 sed '/^#/d' final2.txt > domains2.txt &&
-while IFS= read -r line; do echo -n $line | base64 -w 1000; done < domains2.txt > domains2_iocs.list &&
+while IFS= read -r line; do echo -n $line | base64 -w 1000; done < domains2.txt > domains_iocs2.list &&
 rm  1.txt 2.txt domains1.txt domains2.txt final2.txt merge2.txt
