@@ -18,7 +18,7 @@ sed '/^#/d' final2.txt > domains2.txt &&
 while IFS= read -r line; do echo -n $line | base64 -w 1000; done < domains2.txt > domains_iocs2.list &&
 echo "base64 2 start" &&
 rm  1.txt 2.txt domains1.txt domains2.txt final2.txt merge2.txt &&
-echo "100% done" 
+echo "100% done" &&
 chown --reference=suricata.yaml domains_iocs2.list domains_iocs1.list &&
 docker exec -it --user suricata suricata bash \ cd /etc/suricata/ \ cp domains_iocs2.list domains_iocs1.list ./rules \
 exit
