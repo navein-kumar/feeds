@@ -10,7 +10,7 @@ while IFS= read -r line; do echo -n $line | base64 -w 1000; done < domains1.txt 
 rm 1.txt 2.txt merge1.txt final1.txt  &&
 echo "50% done" &&
 #curl "https://raw.githubusercontent.com/xRuffKez/NRD/main/nrd-14day.txt"  -o 1.txt &&
-curl "https://raw.githubusercontent.com/xRuffKez/NRD/main/nrd-14day.txt"  -o 2.txt &&
+curl "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/tif.medium-onlydomains.txt"  -o 2.txt &&
 cat  2.txt domains1.txt > merge2.txt &&
 sort merge2.txt | uniq > final2.txt &&
 echo "merge 2 done" &&
