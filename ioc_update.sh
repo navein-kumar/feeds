@@ -34,5 +34,6 @@ echo "50% done" ;
 rm  1.txt 2.txt domains1.txt domains2.txt final2.txt merge2.txt xaa xab xac ;
 echo "100% done" ;
 chown --reference=suricata.yaml domains_iocs1.list domains_iocs2.list domains_iocs3.list ; 
+docker exec scirius python /opt/scirius/manage.py updatesuricata && echo "done." || echo "ERROR"
 docker restart suricata
 exit
